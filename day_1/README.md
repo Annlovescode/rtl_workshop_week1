@@ -60,6 +60,7 @@ Let’s simulate a simple **2-to-1 multiplexer** using iverilog!
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ```
+![Git Clone Proof](images/gitclone_proof.png)
 
 ###  Step 2: Install Required Tools
 
@@ -88,9 +89,8 @@ View the waveform:
 gtkwave tb_good_mux.vcd
 ```
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b" alt="GTKWave Example" width="70%">
-</div>
+![Git Clone Proof](images/gtk_good_mux_proof.png)
+
 
 ---
 
@@ -158,12 +158,13 @@ Let’s synthesize the `good_mux` design using Yosys!
 
 2. **Read the liberty library**
     ```shell
-    read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   read_liberty -lib /home/the_honored_one/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
     ```
 
 3. **Read the Verilog code**
     ```shell
-    read_verilog /home/vsduser/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
+    read_verilog /home/the_honored_one/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
     ```
 
 4. **Synthesize the design**
@@ -173,7 +174,7 @@ Let’s synthesize the `good_mux` design using Yosys!
 
 5. **Technology mapping**
     ```shell
-    abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+   abc -liberty /home/the_honored_one/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
 6. **Visualize the gate-level netlist**
@@ -181,9 +182,8 @@ Let’s synthesize the `good_mux` design using Yosys!
     show
     ```
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3" alt="Yosys Gate-level Schematic" width="70%">
-</div>
+
+![Git Clone Proof](images/yosys_good_mux_proof.png)
 
 ---
 
